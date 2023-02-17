@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     azuread = {
-      source = "hashicorp/azuread"
+      source  = "hashicorp/azuread"
       version = "1.1.1"
     }
   }
@@ -18,7 +18,7 @@ resource "azuread_user" "user" {
 }
 
 resource "azuread_group" "group" {
-  name    = "MyTerraformGroup"
+  name = "MyTerraformGroup"
   members = [
     azuread_user.user.object_id,
     /* more users */

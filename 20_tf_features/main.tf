@@ -213,8 +213,8 @@ resource "azurerm_storage_account" "storage_tf_enabled_resource_for_inner_block"
     for_each = var.resource_enabled ? ["any_value"] : []
     # count = var.resource_enabled ? 1 : 0 # count couldn't be used inside nested block
     content {
-      default_action             = "Deny"
-      ip_rules                   = ["100.0.0.1"]
+      default_action = "Deny"
+      ip_rules       = ["100.0.0.1"]
     }
   }
 }

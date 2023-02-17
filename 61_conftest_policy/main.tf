@@ -21,7 +21,7 @@ resource "azurerm_storage_account" "storage" {
   resource_group_name      = "stor*account" # error here
   location                 = "westeurop"
   account_tier             = "Standard"
-  account_kind             = "StorageV3" # error here
+  account_kind             = "StorageV3"  # error here
   default_action           = "AllowAzure" # error here
   account_replication_type = "LRS"
   allow_blob_public_access = true
@@ -29,6 +29,6 @@ resource "azurerm_storage_account" "storage" {
 
 resource "azurerm_managed_disk" "source" {
   encryption_settings {
-      enabled = false
+    enabled = false
   }
 }

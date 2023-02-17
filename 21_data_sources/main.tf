@@ -65,7 +65,7 @@ output "aks_latest_version" {
 
 resource "null_resource" "time_now" {
   provisioner "local-exec" {
-    command = "Get-Date > date.txt"
+    command     = "Get-Date > date.txt"
     interpreter = ["PowerShell", "-Command"]
   }
 }
@@ -77,7 +77,7 @@ resource "null_resource" "ip_info" {
       "My machine IP adress:",
       data.http.my_ip.body,
       ">",
-      "info.txt"])
+    "info.txt"])
   }
 }
 

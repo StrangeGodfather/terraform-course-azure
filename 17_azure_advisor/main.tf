@@ -2,10 +2,10 @@
 
 data "azurerm_advisor_recommendations" "advisor" {
   filter_by_category = ["security",
-                        "cost",
-                        "HighAvailability",
-                        "Performance",
-                        "OperationalExcellence"]
+    "cost",
+    "HighAvailability",
+    "Performance",
+  "OperationalExcellence"]
   # filter_by_resource_groups = ["example-resgroups"]
 }
 
