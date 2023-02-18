@@ -34,3 +34,5 @@ terraform workspace list
 terraform plan -out prod.tfplan
 
 terraform apply prod.tfplan
+
+terraform workspace select default

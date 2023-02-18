@@ -14,9 +14,3 @@ resource "azurerm_template_deployment" "arm" {
     storageAccountType = "Standard_LRS"
   }
 }
-
-# azurerm_resource_group_template_deployment is replacing azurerm_template_deployment
-# src: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group_template_deployment
-#
-# resource "azurerm_resource_group_template_deployment" "arm" {
-# }

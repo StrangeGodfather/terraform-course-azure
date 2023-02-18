@@ -156,22 +156,6 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     service_cidr       = var.aks_service_cidr
   }
 
-  role_based_access_control {
-    enabled = var.aks_enable_rbac
-  }
-
-  addon_profile {
-    ingress_application_gateway {
-      enabled    = true
-      gateway_id = azurerm_application_gateway.appgw.id
-      # other options if we want to allow the AGIC addon to create a new AppGW 
-      # and not use an existing one
-      # subnet_id    = # link AppGW to specific Subnet
-      # gateway_name = # give a name to the generated AppGW
-      # subnet_cidr  = # specify the CIDR range for the Subnet that will be created
-    }
-  }
-
   depends_on = [azurerm_virtual_network.vnet, azurerm_application_gateway.appgw]
   tags       = var.tags
 }

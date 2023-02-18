@@ -113,7 +113,8 @@ variable "vm_user_name" {
 
 variable "public_ssh_key_path" {
   description = "Public key path for SSH."
-  default     = "~/.ssh/id_rsa.pub"
+  # default     = "~/.ssh/id_rsa.pub"
+  default = "~/.ssh/known_hosts"
 }
 
 variable "tags" {

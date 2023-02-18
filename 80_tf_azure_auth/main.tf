@@ -1,17 +1,16 @@
 provider "azurerm" {
   features {}
-
-  subscription_id = "00000000000000-4a66-xxxx-4481e2f0517e"
-  client_id       = "00000000000-2860-4349-b20b-da9ad1b9a450"
-  client_secret   = "000000000000000.sJr.NRT212OLQfFBplG"
-  tenant_id       = "00000000000000-4ef3-xxxx-ad55c555e729"
+  # subscription_id = "00000000000000-4a66-xxxx-4481e2f0517e"
+  # client_id       = "00000000000-2860-4349-b20b-da9ad1b9a450"
+  # client_secret   = "000000000000000.sJr.NRT212OLQfFBplG"
+  # tenant_id       = "00000000000000-4ef3-xxxx-ad55c555e729"
 }
 
 terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "2.56.0"
+      version = "~>2.78.0"
     }
   }
 }

@@ -85,19 +85,19 @@ resource "null_resource" "ip_info" {
 # remote-exec
 #----------------------------------------------------------------
 
-resource "null_resource" "remote" {
-  provisioner "remote-exec" {
-    connection {
-      host     = azurerm_public_ip.windows.ip_address
-      type     = "winrm"
-      port     = 5985
-      https    = false
-      timeout  = "5m"
-      user     = var.admin_username
-      password = var.admin_password
-    }
-    inline = [
-      "powershell.exe -ExecutionPolicy Unrestricted -Command {Install-WindowsFeature -name Web-Server -IncludeManagementTools}",
-    ]
-  }
-}
+# resource "null_resource" "remote" {
+#   provisioner "remote-exec" {
+#     connection {
+#       host     = azurerm_public_ip.windows.ip_address
+#       type     = "winrm"
+#       port     = 5985
+#       https    = false
+#       timeout  = "5m"
+#       user     = var.admin_username
+#       password = var.admin_password
+#     }
+#     inline = [
+#       "powershell.exe -ExecutionPolicy Unrestricted -Command {Install-WindowsFeature -name Web-Server -IncludeManagementTools}",
+#     ]
+#   }
+# }
